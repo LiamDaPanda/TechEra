@@ -198,3 +198,10 @@ footer a { color: var(--muted); }
 .finale h3 { font-size: 1.6rem; margin: 0 0 10px; letter-spacing: -0.02em; }
 .finale p { margin: 0; color: var(--muted); max-width: 40ch; }
 @media (max-width: 900px) { .finale { grid-template-columns: 1fr; gap: 18px; margin-top: 40px; } }
+
+/* multiblocks: one big shot, the copy and a smaller shot beside it */
+.mega { display: grid; grid-template-columns: 7fr 5fr; gap: 40px; align-items: start; margin-top: 72px; }
+.mega img { border-radius: var(--radius); border: 1px solid var(--line); }
+.mega h3 { font-size: 1.6rem; margin: 0 0 10px; letter-spacing: -0.02em; }
+.mega p { margin: 0 0 22px; color: var(--muted); max-width: 44ch; }
+@media (max-width: 900px) { .mega { grid-template-columns: 1fr; gap: 18px; margin-top: 44px; } }

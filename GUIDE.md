@@ -22,14 +22,15 @@ of the story: the server hears about it, your team gets the ending, and its name
 9. [Shopping list for every era gate](#shopping-list-for-every-era-gate)
 10. [Reference tables](#reference-tables)
 11. [Power and automation](#power-and-automation)
-12. [Raids and defences](#raids-and-defences)
-13. [Inventions, rifts and the monument](#inventions-patents-masterworks-and-the-monument)
-14. [Teams and multiplayer](#teams-and-multiplayer)
-15. [Advancements](#advancements)
-16. [Troubleshooting and FAQ](#troubleshooting-and-faq)
-17. [Server settings](#server-settings)
-18. [Speedrun checklist](#speedrun-checklist)
-19. [Recipe index](#recipe-index)
+12. [Multiblock machines](#multiblock-machines)
+13. [Raids and defences](#raids-and-defences)
+14. [Inventions, rifts and the monument](#inventions-patents-masterworks-and-the-monument)
+15. [Teams and multiplayer](#teams-and-multiplayer)
+16. [Advancements](#advancements)
+17. [Troubleshooting and FAQ](#troubleshooting-and-faq)
+18. [Server settings](#server-settings)
+19. [Speedrun checklist](#speedrun-checklist)
+20. [Recipe index](#recipe-index)
 
 ---
 
@@ -289,7 +290,8 @@ B B B
 ## Era III: Industrial (1700-1900)
 
 **Unlocked at the start of the era:** Bessemer converter, paper cartridges, breech-loading
-rifle, steam engine, copper cable, steam wagon and the **telegraph**.
+rifle, steam engine, copper cable, steam wagon, the **telegraph** and the **Great Blast Furnace**
+([multiblock](#multiblock-machines)).
 
 ```
 Bessemer Converter      Breech Rifle            Steam Engine
@@ -371,8 +373,8 @@ M I M   C = composite plate
 
 ## Era V: Futuristic (2000+)
 
-**Unlocked at the start of the era:** energy cells, plasma rifle, power armour, plasma turret and
-hover bike.
+**Unlocked at the start of the era:** energy cells, plasma rifle, power armour, plasma turret,
+hover bike, the **Fusion Reactor** ([multiblock](#multiblock-machines)) and the Time Machine.
 
 ```
 Energy Cell                 Plasma Rifle
@@ -456,6 +458,8 @@ Times are per run without power; power halves them.
 | Dynamo | III→IV gate | 4 copper + steel → electric motor | - | 15 s |
 | Dynamo | V | energy cell + redstone → recharged cell | - | 15 s |
 | Particle accelerator | IV→V gate | 2 motors + 8 redstone + circuit board → exotic matter | - | 30 s |
+| Great Blast Furnace | III (multiblock) | 4 ore + 2 coke → 10 cast iron + 2 slag; 8 cast iron + 2 coke → 10 steel | 1400 / 1600 °C | 40 s |
+| Fusion Reactor | V (multiblock) | burns fusion pellets → power for 32 machines | 2500 °C | - |
 | Time Machine | V (finale) | 8 exotic matter + 8 circuit boards + energy cell → Homecoming Medal | - | 180 s |
 
 ### Weapons
@@ -542,6 +546,59 @@ All defences only hurt hostile mobs, never players.
 
 ---
 
+## Multiblock machines
+
+Two machines are **structures** you build block by block around a controller. A multiblock only
+runs while its structure is complete, and the controller's screen tells you which it is
+("Structure complete" or "Incomplete").
+
+- **Build guide:** **sneak-click the controller** with an empty hand. Chat tells you how many
+  blocks are still needed and what goes next, and **glowing orange marks** show every missing
+  block for 10 seconds.
+- **Facing:** the structure is built *behind* the controller, which is its front face. Place
+  the controller first, facing the way you want the front to look.
+- **Completion:** when the last block goes in, the structure lights up, a beacon sound plays,
+  and you get the **Great Works** advancement.
+
+### Great Blast Furnace (Era III)
+A tower of **fire bricks**, 3 wide, 3 deep and 4 tall, hollow inside, with the controller in the
+middle of the bottom front. Seen from the front, each layer from the bottom up (C is the
+controller, F a fire brick, `.` empty air):
+```
+Bottom      2nd         3rd         Top
+F C F       F F F       F F F       F F F    (front row)
+F F F       F . F       F . F       F . F
+F F F       F F F       F F F       F F F    (back row)
+```
+- **Fire bricks:** 8 bricks around 1 coke give 8; you need 32.
+- **Controller:** fire bricks around a high furnace with a steel ingot on top.
+- **Recipes** (coke as fuel; the tower reaches 1450 °C, plus 250 with bellows):
+  - 4 ore + 2 coke → **10 cast iron** + 2 slag, at 1400 °C;
+  - 8 cast iron + 2 coke → **10 steel**, at 1600 °C (bellows).
+- **Why build it:** it gives more metal per ore than the high furnace, and more steel per cast
+  iron than the Bessemer converter. Fire and smoke roar out of the chimney while it works.
+
+### Fusion Reactor (Era V)
+A 5×5 ring, 3 tall. Seen from the front (S fusion casing, G any glass, O the fusion coil,
+`.` anything, blank corners are empty):
+```
+Bottom          Middle          Top
+  S C S           G G G           S S S      (front row)
+S . . . S       G . . . G       S . . . S
+S . . . S       G . O . G       S . . . S
+S . . . S       G . . . G       S . . . S
+  S S S           G G G           S S S      (back row)
+```
+- **Parts:** fusion casing (4 per craft: steel, composite plates and a circuit board; you need
+  23), 12 glass, 1 **fusion coil** (copper cable, circuit boards and exotic matter), and the
+  controller (casing, circuit boards, motors and an energy cell).
+- **Fuel:** **fusion pellets** (1 exotic matter + 4 redstone give 4). Each burns for 10 minutes.
+- **Power:** the plasma takes about 40 seconds to pass **2500 °C**. From then on the reactor
+  powers **32 machines** on its cable network, against 4 for a steam engine. Plasma circles
+  the coil while it runs.
+
+---
+
 ## Raids and defences
 
 - **When:** every 3-4 in-game days, at night, if someone on your team is online.
@@ -602,6 +659,7 @@ to see the register: every invention, its real year and inventor, and who holds 
 | Steam wagon | Cugnot, 1769 | Energy cell | late 21st century |
 | Copper cable | Cooke and Wheatstone, 1837 | Hover bike, exotic matter | 22nd century |
 | Telegraph | Samuel Morse, 1844 | Time Machine | H. G. Wells (on paper), 1895 |
+| Circuit board | Jack Kilby, 1958 | Fusion Reactor | mid-21st century |
 | Electric motor | Thomas Davenport, 1837 | Power armour, plasma rifle | 23rd century |
 
 On a multiplayer server this turns the tech tree into a race. Patents are for honour only:
@@ -693,7 +751,7 @@ monument appears with your team's next era.
 
 ## Advancements
 
-Press **L** and open the **Tech Era** tab (29 advancements). Era advancements are granted to the whole team.
+Press **L** and open the **Tech Era** tab (30 advancements). Era advancements are granted to the whole team.
 
 | Advancement | How |
 |---|---|
@@ -723,6 +781,7 @@ Press **L** and open the **Tech Era** tab (29 advancements). Era advancements ar
 | Homeward Bound | Build a time machine and go home |
 | Patent Pending | Be the first on the server to invent something |
 | Masterwork | Quench a Fine-quality tool or weapon |
+| Great Works | Complete a multiblock machine |
 | Hold the Walls | Beat a raid |
 | Kingslayer | Defeat a raid Warlord and take his banner |
 | A Fort of Our Own | Settle a team fort |
@@ -793,7 +852,7 @@ Everything lives in `config/techera.json`, and missing keys are filled in on sta
 | `raids.spawnDistance` | 36 | How far from the fort raiders appear |
 | `raids.teamPvpRaidsEnabled` | false | Allow team wars |
 | `raids.warMinutes` | 10 | War length |
-| `power.steamEngineMachines` / `solarPanelMachines` | 4 / 2 | Machines each generator can run |
+| `power.steamEngineMachines` / `solarPanelMachines` / `fusionReactorMachines` | 4 / 2 / 32 | Machines each generator can run |
 | `teams.claimRadius` | 40 | Half-width of a team fort's claim (0 turns claims off) |
 | `teams.homeCooldownSeconds` | 300 | Cooldown for `/techera team home` |
 | `rifts.enabled` | true | Temporal rifts on or off |
@@ -1237,6 +1296,24 @@ W W W
 ```
 W = any Wool, C = Copper Ingot
 
+**Fire Bricks ×8**
+
+```
+B B B
+B C B
+B B B
+```
+B = Brick, C = Coke
+
+**Great Blast Furnace**
+
+```
+F S F
+F H F
+F F F
+```
+F = Fire Bricks, S = Steel Ingot, H = High Furnace
+
 **Paper Cartridge ×2**
 
 Shapeless: Paper + Gunpowder + Musket Ball
@@ -1391,6 +1468,37 @@ C R C
 ```
 C = Copper Ingot, R = Redstone, X = Exotic Matter
 
+**Fusion Casing ×4**
+
+```
+S P S
+P I P
+S P S
+```
+S = Steel Ingot, P = Composite Plate, I = Circuit Board
+
+**Fusion Coil**
+
+```
+C I C
+I X I
+C I C
+```
+C = Copper Cable, I = Circuit Board, X = Exotic Matter
+
+**Fusion Pellet ×4**
+
+Shapeless: Exotic Matter + Redstone + Redstone + Redstone + Redstone
+
+**Fusion Reactor**
+
+```
+F I F
+M E M
+F I F
+```
+F = Fusion Casing, I = Circuit Board, M = Electric Motor, E = Energy Cell
+
 **Hover Bike**
 
 ```
@@ -1471,6 +1579,8 @@ X = Exotic Matter, C = Circuit Board, E = Energy Cell, A = Particle Accelerator
 | Coke Oven | 2 × Coal | Coke | 900 °C | **Era III gate** |
 | Dynamo | 4 × Copper Ingot + Steel Ingot | Electric Motor | - | **Era IV gate** |
 | Particle Accelerator | 2 × Electric Motor + 8 × Redstone + Circuit Board | Exotic Matter | - | **Era V gate** |
+| Great Blast Furnace | 4 × Iron Ore (bog iron, raw iron or iron ore) + 2 × Coke | 10 × Cast Iron Ingot + Slag | 1400 °C | has quality |
+| Great Blast Furnace | 8 × Cast Iron Ingot + 2 × Coke | 10 × Steel Ingot | 1600 °C | has quality |
 | Powder Mill | 2 × Saltpetre + Sulfur + Charcoal | 4 × Gunpowder | - | **Era II gate** |
 | Time Machine | 8 × Exotic Matter + 8 × Circuit Board + Energy Cell | Homecoming Medal | - | - |
 | Forge | Iron Bloom | Hot Iron Bloom | 900 °C | has quality |

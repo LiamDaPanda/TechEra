@@ -191,3 +191,10 @@ footer a { color: var(--muted); }
 	@keyframes shimmer { to { background-position: -200% 0; } }
 }
 .dl-file { color: var(--muted); font-size: .9rem; }
+
+/* the finale: one wide image with its caption beside it */
+.finale { display: grid; grid-template-columns: 7fr 5fr; gap: 40px; align-items: center; margin-top: 64px; }
+.finale img { border-radius: var(--radius); border: 1px solid var(--line); }
+.finale h3 { font-size: 1.6rem; margin: 0 0 10px; letter-spacing: -0.02em; }
+.finale p { margin: 0; color: var(--muted); max-width: 40ch; }
+@media (max-width: 900px) { .finale { grid-template-columns: 1fr; gap: 18px; margin-top: 40px; } }

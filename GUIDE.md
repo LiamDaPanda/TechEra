@@ -4,9 +4,10 @@ This guide covers all five eras, from a peasant in a timber fort to the plasma r
 reference tables for every machine, weapon, armour set and vehicle. The numbers are the
 defaults; server owners can change them in `config/techera.json`.
 
-**"Beating" Tech Era** means reaching **Era V (Futuristic)**, after which the notebook footer
-says it is the final era. To finish off, build power armour, a plasma rifle and a hover bike, and
-complete the advancement tab (press **L**, then open the *Tech Era* tab).
+**Beating Tech Era** means building the **Time Machine** in Era V and going home. That's the end
+of the story: the server hears about it, your team gets the ending, and its name tag turns to
+`[✦]`. Your world carries on afterwards. For completionists there's also the advancement tab
+(press **L**, then open the *Tech Era* tab).
 
 ## Contents
 
@@ -41,6 +42,9 @@ complete the advancement tab (press **L**, then open the *Tech Era* tab).
   - **Entering a new era** unlocks that era's basic recipes all at once.
 - **Locked recipes** leave the crafting result slot empty. If a recipe "doesn't work", you
   haven't unlocked it yet. Learned recipes go into your recipe book automatically.
+- **Machine recipes:** hover the **?** in the top-right corner of any machine's screen to see
+  everything it can make (inputs, output and the heat it needs). It only lists recipes your team
+  has unlocked.
 - **The Yankee's Notebook** (right-click it) shows sketches for your current and past eras:
   - ✔ means you have learned it;
   - ? means you haven't, and the sketch hints at how to learn it.
@@ -393,6 +397,21 @@ Using them:
 - **Hover bike:** each charge gives 30 s of flight. It climbs 1.5-block steps and has low
   gravity.
 
+### The finale: the Time Machine
+```
+X C X   X = exotic matter
+E A E   C = circuit board   E = energy cell
+X C X   A = particle accelerator
+```
+Load it with **8 exotic matter, 8 circuit boards and 1 energy cell**. It runs for 3 minutes
+(90 s if it's powered). When it finishes:
+- lightning splits the sky over it, and the whole server hears that your team went home;
+- your team sees the ending titles and gets the **Homeward Bound** advancement;
+- the machine drops a **Homecoming Medal**, and your team's name tag turns to `[✦]`.
+
+Nothing is taken away; you can keep playing. The story ends once per team, but the machine
+keeps working (and keeps putting on a show).
+
 ---
 
 ## Shopping list for every era gate
@@ -437,6 +456,7 @@ Times are per run without power; power halves them.
 | Dynamo | III→IV gate | 4 copper + steel → electric motor | - | 15 s |
 | Dynamo | V | energy cell + redstone → recharged cell | - | 15 s |
 | Particle accelerator | IV→V gate | 2 motors + 8 redstone + circuit board → exotic matter | - | 30 s |
+| Time Machine | V (finale) | 8 exotic matter + 8 circuit boards + energy cell → Homecoming Medal | - | 180 s |
 
 ### Weapons
 
@@ -581,7 +601,7 @@ to see the register: every invention, its real year and inventor, and who holds 
 | Steam engine | Thomas Newcomen, 1712 | Sentry turret | Samsung Techwin, 2006 |
 | Steam wagon | Cugnot, 1769 | Energy cell | late 21st century |
 | Copper cable | Cooke and Wheatstone, 1837 | Hover bike, exotic matter | 22nd century |
-| Telegraph | Samuel Morse, 1844 | | |
+| Telegraph | Samuel Morse, 1844 | Time Machine | H. G. Wells (on paper), 1895 |
 | Electric motor | Thomas Davenport, 1837 | Power armour, plasma rifle | 23rd century |
 
 On a multiplayer server this turns the tech tree into a race. Patents are for honour only:
@@ -673,7 +693,7 @@ monument appears with your team's next era.
 
 ## Advancements
 
-Press **L** and open the **Tech Era** tab (28 advancements). Era advancements are granted to the whole team.
+Press **L** and open the **Tech Era** tab (29 advancements). Era advancements are granted to the whole team.
 
 | Advancement | How |
 |---|---|
@@ -700,6 +720,7 @@ Press **L** and open the **Tech Era** tab (28 advancements). Era advancements ar
 | Bolt of Light | Get a plasma rifle |
 | Above It All | Get a hover bike |
 | Walking Fortress | Get a power chestplate |
+| Homeward Bound | Build a time machine and go home |
 | Patent Pending | Be the first on the server to invent something |
 | Masterwork | Quench a Fine-quality tool or weapon |
 | Hold the Walls | Beat a raid |
@@ -795,6 +816,7 @@ Operator commands: `/techera era [set N]`, `/techera unlock list | grant <id>`, 
 6. Make a Bessemer converter for bulk steel, then a breech rifle, then a dynamo. Make 8 motors
    for **Era IV**.
 7. Make an automatic rifle, then a particle accelerator. Make 8 exotic matter for **Era V**.
+8. Make 8 more exotic matter and 8 circuit boards, then build the **Time Machine** and go home.
 
 Mine copper, redstone and chromite early, since Era V needs about 84 copper and 80 redstone.
 Put a steam engine on your machines as soon as Era III starts; halving every timer saves more
@@ -1430,6 +1452,15 @@ X . X
 ```
 X = Exotic Matter
 
+**Time Machine**
+
+```
+X C X
+E A E
+X C X
+```
+X = Exotic Matter, C = Circuit Board, E = Energy Cell, A = Particle Accelerator
+
 ### Machine recipes
 
 | Machine | Inputs | Output | Heat | Notes |
@@ -1441,6 +1472,7 @@ X = Exotic Matter
 | Dynamo | 4 × Copper Ingot + Steel Ingot | Electric Motor | - | **Era IV gate** |
 | Particle Accelerator | 2 × Electric Motor + 8 × Redstone + Circuit Board | Exotic Matter | - | **Era V gate** |
 | Powder Mill | 2 × Saltpetre + Sulfur + Charcoal | 4 × Gunpowder | - | **Era II gate** |
+| Time Machine | 8 × Exotic Matter + 8 × Circuit Board + Energy Cell | Homecoming Medal | - | - |
 | Forge | Iron Bloom | Hot Iron Bloom | 900 °C | has quality |
 | Bloomery | Iron Ore (bog iron, raw iron or iron ore) + 2 × Charcoal | Iron Bloom + Slag | 1200 °C | has quality |
 | Quench Barrel | a wrought iron or steel tool | (same item) | - | - |

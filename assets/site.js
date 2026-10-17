@@ -16,8 +16,7 @@
 			version.textContent = release.tag_name.replace(/^v/, "");
 			if (jar) {
 				button.href = jar.browser_download_url;
-				button.textContent = "Download " + jar.name;
-				size.textContent = (jar.size / 1024 / 1024).toFixed(1) + " MB";
+				size.textContent = jar.name + ", " + (jar.size / 1024 / 1024).toFixed(1) + " MB";
 			}
 		})
 		.catch(() => { version.textContent = "see the releases page"; });

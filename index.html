@@ -9,9 +9,7 @@
 	<meta property="og:description" content="Start in a timber fort around 1000 AD. Build your way to the plasma rifle.">
 	<meta property="og:image" content="assets/img/monument.jpg">
 	<link rel="icon" href="assets/img/icon.png">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+	<link rel="preload" href="assets/fonts/outfit-latin.woff2" as="font" type="font/woff2" crossorigin>
 	<link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
@@ -30,8 +28,8 @@
 <main>
 	<div class="wrap hero">
 		<div>
-			<h1 class="rise">Drag civilisation from 1000 AD to the future.</h1>
-			<p class="rise" style="--d:1">A Fabric mod for Minecraft 26.3. Smelt, forge and invent your way through five eras of technology.</p>
+			<h1 class="rise">From 1000 AD to the future.</h1>
+			<p class="rise" style="--d:1">A Fabric mod for Minecraft 26.3. Start in a timber fort and invent your way through five eras.</p>
 			<div class="ctas rise" style="--d:2">
 				<a class="btn btn-primary" href="#download">Download</a>
 				<a class="btn btn-ghost" href="guide.html">Read the guide</a>
@@ -93,14 +91,16 @@
 	</section>
 
 	<section style="padding-top:0">
-		<div class="wrap">
-			<h2 class="reveal">Install in two minutes.</h2>
-			<p class="lede reveal">Works with any launcher that supports Fabric: the official launcher, Prism, MultiMC or Modrinth App.</p>
-			<div class="install reveal">
-				<div><h3>Get Fabric</h3><p>Install <a href="https://fabricmc.net/use/installer/">Fabric Loader</a> 0.19.5 or newer for Minecraft 26.3.</p></div>
-				<div><h3>Add Fabric API</h3><p>Put <a href="https://modrinth.com/mod/fabric-api">Fabric API</a> in your <span class="mono">mods</span> folder.</p></div>
-				<div><h3>Drop in Tech Era</h3><p>Add the Tech Era jar to <span class="mono">mods</span> and create a new world. The fort is built at spawn.</p></div>
+		<div class="wrap install">
+			<div class="reveal">
+				<h2>Install in two minutes.</h2>
+				<p class="lede">Works with any launcher that supports Fabric: the official launcher, Prism, MultiMC or Modrinth App.</p>
 			</div>
+			<ol class="reveal">
+				<li><h3>Get Fabric</h3><p>Install <a href="https://fabricmc.net/use/installer/">Fabric Loader</a> 0.19.5 or newer for Minecraft 26.3.</p></li>
+				<li><h3>Add Fabric API</h3><p>Put <a href="https://modrinth.com/mod/fabric-api">Fabric API</a> in your <span class="mono">mods</span> folder.</p></li>
+				<li><h3>Drop in Tech Era</h3><p>Add the Tech Era jar to <span class="mono">mods</span> and create a new world. The fort is built at spawn.</p></li>
+			</ol>
 		</div>
 	</section>
 
@@ -110,7 +110,7 @@
 				<div>
 					<h2>Download Tech Era</h2>
 					<dl>
-						<dt>Version</dt><dd class="mono" id="dl-version">loading...</dd>
+						<dt>Version</dt><dd class="mono" id="dl-version"><span class="skel" aria-label="Loading version"></span></dd>
 						<dt>Minecraft</dt><dd class="mono">26.3 (Java Edition)</dd>
 						<dt>Loader</dt><dd class="mono">Fabric 0.19.5+, Fabric API</dd>
 						<dt>Java</dt><dd class="mono">25</dd>
@@ -118,8 +118,8 @@
 					<p class="note">This is the only official download. The mod is free to play but all rights are reserved: please don't re-upload it or bundle it into modpacks. Link here instead. <a href="LICENSE.txt">Read the license</a>.</p>
 				</div>
 				<div class="dl-box">
-					<a class="btn btn-primary" id="dl-button" href="https://github.com/LiamDaPanda/TechEra/releases/latest">Download .jar</a>
-					<span class="mono" id="dl-size" style="color:var(--muted);font-size:.9rem"></span>
+					<a class="btn btn-primary" id="dl-button" href="https://github.com/LiamDaPanda/TechEra/releases/latest">Download</a>
+					<span class="mono dl-file" id="dl-size"></span>
 					<a href="https://github.com/LiamDaPanda/TechEra/releases">All versions</a>
 				</div>
 			</div>

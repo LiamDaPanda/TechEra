@@ -135,7 +135,7 @@ Leather and **clay** (riverbeds) are the two things new players most often forge
 
 ---
 
-## Era I: Medieval (c. 1000–1400)
+## Era I: Medieval (c. 1000-1400)
 
 ### 1. Starter tools
 ```
@@ -174,7 +174,7 @@ C . C     C = clay ball
 S S S
 ```
 - **Ore:** bog iron, raw iron, iron ore or deepslate iron ore.
-  - **Bog iron** is found in **swamps and mangrove swamps**, in the topsoil at Y 54–68. You can
+  - **Bog iron** is found in **swamps and mangrove swamps**, in the topsoil at Y 54-68. You can
     dig it with a stone shovel, with no mining trip needed.
 - **Recipe:** 1 ore + 2 charcoal in the inputs, and charcoal in the fuel slot.
 - **Heat:** it needs **1200 °C**, but charcoal stops at 1150 °C, so **pump the hand bellows**.
@@ -243,7 +243,7 @@ P P P   F = rotten flesh S S S   I = steel ingot
 
 ---
 
-## Era II: Gunpowder (1400–1700)
+## Era II: Gunpowder (1400-1700)
 
 **Unlocked at the start of the era:** matchlock musket, musket balls, high furnace, steel plate
 armour and the powder keg.
@@ -282,7 +282,7 @@ B B B
 
 ---
 
-## Era III: Industrial (1700–1900)
+## Era III: Industrial (1700-1900)
 
 **Unlocked at the start of the era:** Bessemer converter, paper cartridges, breech-loading
 rifle, steam engine, copper cable, steam wagon and the **telegraph**.
@@ -326,7 +326,7 @@ S C S   R = redstone block
 
 ---
 
-## Era IV: Modern (1900–2000)
+## Era IV: Modern (1900-2000)
 
 **Unlocked at the start of the era:** circuit boards, automatic rifle, composite armour, sentry
 turret, solar panel and motorcar (plus the vanilla items in the table above).
@@ -425,29 +425,29 @@ Times are per run without power; power halves them.
 | Bloomery | I | ore + 2 charcoal → iron bloom + slag | 1200 °C | 30 s |
 | Forge | I | iron bloom → hot iron bloom | 900 °C | 12 s |
 | Forge | I | wrought iron + 2 charcoal → steel | 1200 °C | 40 s |
-| Forging anvil | I | hot bloom → wrought iron (6 hammer strikes) | — | — |
-| Forging anvil | I | salvage iron gear / crossbow | — | — |
-| Quench barrel | I | tool → quenched tool | — | 3 s |
-| Nitre bed | I | 4 organics → saltpetre | — | 45 s |
-| Powder mill | I→II gate | 2 saltpetre + sulphur + charcoal → 4 gunpowder | — | 20 s |
+| Forging anvil | I | hot bloom → wrought iron (6 hammer strikes) | - | - |
+| Forging anvil | I | salvage iron gear / crossbow | - | - |
+| Quench barrel | I | tool → quenched tool | - | 3 s |
+| Nitre bed | I | 4 organics → saltpetre | - | 45 s |
+| Powder mill | I→II gate | 2 saltpetre + sulphur + charcoal → 4 gunpowder | - | 20 s |
 | High furnace | II | ore + 2 charcoal → 2 cast iron + slag | 1350 °C | 30 s |
 | Coke oven | II→III gate | 2 coal → coke | 900 °C | 20 s |
 | Bessemer converter | III | 4 cast iron → 4 steel | 1500 °C | 20 s |
-| Steam engine | III | burns fuel → power at 500 °C+ | 500 °C | — |
-| Dynamo | III→IV gate | 4 copper + steel → electric motor | — | 15 s |
-| Dynamo | V | energy cell + redstone → recharged cell | — | 15 s |
-| Particle accelerator | IV→V gate | 2 motors + 8 redstone + circuit board → exotic matter | — | 30 s |
+| Steam engine | III | burns fuel → power at 500 °C+ | 500 °C | - |
+| Dynamo | III→IV gate | 4 copper + steel → electric motor | - | 15 s |
+| Dynamo | V | energy cell + redstone → recharged cell | - | 15 s |
+| Particle accelerator | IV→V gate | 2 motors + 8 redstone + circuit board → exotic matter | - | 30 s |
 
 ### Weapons
 
 | Weapon | Era | Ammo | Damage per hit | Rate of fire | Durability |
 |---|---|---|---|---|---|
-| Wrought iron sword | I | — | 6 | vanilla sword | 220 |
-| Steel sword | I | — | 6.5 | vanilla sword | 750 |
-| Wrought iron / steel spear | I | — | charge attack | — | 220 / 750 |
+| Wrought iron sword | I | - | 6 | vanilla sword | 220 |
+| Steel sword | I | - | 6.5 | vanilla sword | 750 |
+| Wrought iron / steel spear | I | - | charge attack | - | 220 / 750 |
 | Crossbow (salvage) | I | arrows | vanilla | vanilla | vanilla |
 | Matchlock musket | II | gunpowder + musket ball | ~15 | 4 s reload | 300 |
-| Cannon (block) | II | cannonball + gunpowder | burst, radius 2.5 | manual | — |
+| Cannon (block) | II | cannonball + gunpowder | burst, radius 2.5 | manual | - |
 | Breech rifle | III | paper cartridge | ~21 | 2 s reload | 600 |
 | Automatic rifle | IV | paper cartridge | ~15 | ~6.7 shots/s (hold) | 1500 |
 | Plasma rifle | V | energy cell charge | ~31 | ~2.5 shots/s | 3000 |
@@ -460,8 +460,8 @@ The total armour points are for a full set; vanilla diamond is 20 points with 2 
 
 | Set | Era | How to unlock | Armour | Toughness | Knockback resist |
 |---|---|---|---|---|---|
-| Wrought iron (or vanilla iron) | I | salvage iron or chainmail armour | 15 | 0.5 | — |
-| Steel plate | II | Era II start | 18 | 1.5 | — |
+| Wrought iron (or vanilla iron) | I | salvage iron or chainmail armour | 15 | 0.5 | - |
+| Steel plate | II | Era II start | 18 | 1.5 | - |
 | Composite | IV | Era IV start | 20 | 2.5 | 20% |
 | Power | V | Era V start | 24 | 3.5 | 60% |
 
@@ -524,22 +524,22 @@ All defences only hurt hostile mobs, never players.
 
 ## Raids and defences
 
-- **When:** every 3–4 in-game days, at night, if someone on your team is online.
+- **When:** every 3-4 in-game days, at night, if someone on your team is online.
 - **Warning:** "RAID!" appears with a compass direction and a horn. You have **60 seconds**.
 - **Where:** raiders spawn 36 blocks from your team's fort, on the side named in the warning.
   If you're more than 80 blocks from the fort, they come for you instead.
 
 | Era | Size | Raiders |
 |---|---|---|
-| I   | 3–8   | zombies in iron helmets (some with chestplates) with iron swords or axes; vindicators |
-| II  | 5–10  | + pillagers |
-| III | 7–12  | + diamond helmets on zombies and illagers |
-| IV  | 9–14  | + a ravager in every six |
-| V   | 11–16 | + an evoker in every five |
+| I   | 3-8   | zombies in iron helmets (some with chestplates) with iron swords or axes; vindicators |
+| II  | 5-10  | + pillagers |
+| III | 7-12  | + diamond helmets on zombies and illagers |
+| IV  | 9-14  | + a ravager in every six |
+| V   | 11-16 | + an evoker in every five |
 
 - **The Warlord:** every raid is led by a named, glowing captain, for example *Warlord Ragnar
   Skullsplitter*. He has three times the health and wears armour from **your** era: wrought
-  iron in Era I, steel in Eras II–III, composite in IV and power armour in V. That armour can
+  iron in Era I, steel in Eras II-III, composite in IV and power armour in V. That armour can
   drop for salvage.
   - He always drops his banner, a **War Trophy** named after him ("Banner of Ragnar
     Skullsplitter").
@@ -601,9 +601,9 @@ Court*, the hero saves his neck by "foretelling" an eclipse; this almanac forete
 - **how close you are to the next era** ("5 of 8 gate runs").
 
 ### Temporal rifts
-You aren't the only thing slipping through time. Every 4–6 days, in daylight, **lightning
-strikes 15–30 blocks from your fort** and leaves a **barrel from your next era**. The chat
-tells you the direction and distance. Contents (3–5 stacks):
+You aren't the only thing slipping through time. Every 4-6 days, in daylight, **lightning
+strikes 15-30 blocks from your fort** and leaves a **barrel from your next era**. The chat
+tells you the direction and distance. Contents (3-5 stacks):
 
 | Your era | The rift brings |
 |---|---|
@@ -766,7 +766,7 @@ Everything lives in `config/techera.json`, and missing keys are filled in on sta
 | `anvilStrikes` | 6 | Hammer strikes per wrought iron ingot |
 | `bellowsPumpTicks` / `bellowsMaxTicks` | 40 / 200 | Heat time per pump, and the most that can be stored |
 | `raids.enabled` | true | Turn raids off entirely |
-| `raids.minDaysBetweenRaids` | 3 | Days between raids (plus 0–1 random) |
+| `raids.minDaysBetweenRaids` | 3 | Days between raids (plus 0-1 random) |
 | `raids.warningSeconds` | 60 | Time between the warning and the attack |
 | `raids.minRaiders` / `maxRaiders` | 3 / 8 | Base raid size (plus 2 per era) |
 | `raids.spawnDistance` | 36 | How far from the fort raiders appear |
@@ -776,7 +776,7 @@ Everything lives in `config/techera.json`, and missing keys are filled in on sta
 | `teams.claimRadius` | 40 | Half-width of a team fort's claim (0 turns claims off) |
 | `teams.homeCooldownSeconds` | 300 | Cooldown for `/techera team home` |
 | `rifts.enabled` | true | Temporal rifts on or off |
-| `rifts.minDaysBetween` | 4 | Days between rifts (plus 0–2 random) |
+| `rifts.minDaysBetween` | 4 | Days between rifts (plus 0-2 random) |
 
 Operator commands: `/techera era [set N]`, `/techera unlock list | grant <id>`, and
 `/techera raid start [now] | stop`, and `/techera rift` (open a rift now).

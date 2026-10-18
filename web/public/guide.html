@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Tech Era Guide</title>
+	<meta name="description" content="The complete Tech Era guide: every era, machine, recipe, weapon and multiplayer system.">
+	<link rel="icon" href="assets/img/icon.png">
+	<link rel="preload" href="assets/fonts/outfit-latin.woff2" as="font" type="font/woff2" crossorigin>
+	<link rel="stylesheet" href="assets/site.css">
+	<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js" integrity="sha384-/TQbtLCAerC3jgaim+N78RZSDYV7ryeoBCVqTuzRrFec2akfBkHS7ACQ3PQhvMVi" crossorigin="anonymous"></script>
+</head>
+<body>
+<header class="nav">
+	<div class="wrap">
+		<a class="brand" href="./"><img src="assets/img/icon.png" alt="">Tech Era</a>
+		<nav class="nav-links">
+			<a href="./#eras">Eras</a>
+			<a href="./#machines">Machines</a>
+			<a href="guide.html">Guide</a>
+			<a class="btn btn-primary" href="./#download">Download</a>
+		</nav>
+	</div>
+</header>
+
+<div class="wrap guide">
+	<aside class="toc" id="toc" aria-label="Guide contents"></aside>
+	<article class="doc" id="doc"><p class="doc-loading">Loading the guide...</p></article>
+</div>
+
+<footer>
+	<div class="wrap">
+		<span>Tech Era © 2026 Liam Chung. All rights reserved. <a href="LICENSE.txt">License</a></span>
+		<span>Not an official Minecraft product. Not approved by or associated with Mojang or Microsoft.</span>
+	</div>
+</footer>
+
+<script>
+// Renders GUIDE.md (the same file as in this repo), builds the contents sidebar from its headings.
+(() => {
+	const doc = document.getElementById("doc"), toc = document.getElementById("toc");
+	const slug = (t) => t.toLowerCase().replace(/<[^>]+>/g, "").replace(/[^\w\s-]/g, "").trim().replace(/\s+/g, "-");
+	fetch("GUIDE.md").then((r) => (r.ok ? r.text() : Promise.reject(r.status))).then((md) => {
+		md = md.replace(/^## Contents[\s\S]*?(?=\n---)/m, ""); // the sidebar replaces the written contents list
+		doc.innerHTML = marked.parse(md);
+		const heads = doc.querySelectorAll("h2, h3");
+		heads.forEach((h) => {
+			h.id = slug(h.textContent);
+			const a = document.createElement("a");
+			a.href = "#" + h.id;
+			a.textContent = h.textContent;
+			if (h.tagName === "H3") a.className = "h3";
+			toc.appendChild(a);
+		});
+		if (location.hash) document.getElementById(location.hash.slice(1))?.scrollIntoView();
+		const links = [...toc.querySelectorAll("a")];
+		const io = new IntersectionObserver((entries) => {
+			for (const e of entries) if (e.isIntersecting) {
+				links.forEach((l) => l.classList.toggle("on", l.getAttribute("href") === "#" + e.target.id));
+			}
+		}, { rootMargin: "-80px 0px -70% 0px" });
+		heads.forEach((h) => io.observe(h));
+	}).catch(() => {
+		doc.innerHTML = '<p>The guide could not be loaded. <a href="GUIDE.md">Open it as plain text</a>.</p>';
+	});
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+Tech Era License (All Rights Reserved)
+
+Copyright (c) 2026 Liam Chung. All rights reserved.
+
+"Tech Era" (the "Mod") means the Tech Era Minecraft mod: its compiled files, code, textures,
+models, sounds, data files, text and documentation.
+
+1. OFFICIAL SOURCE
+   The only official place to download the Mod is:
+   https://liamdapanda.github.io/TechEra/ (or its mirror https://techera-mod.netlify.app/)
+   and the GitHub releases page it links to (https://github.com/LiamDaPanda/TechEra/releases).
+
+2. WHAT YOU MAY DO
+   a. Download the Mod from the official source and use it to play Minecraft, in singleplayer
+      or multiplayer.
+   b. Install the Mod on a Minecraft server you run, so long as players get their copy from the
+      official source.
+   c. Make and share videos, streams, screenshots, reviews and guides that show the Mod, and
+      link to the official source.
+
+3. WHAT YOU MAY NOT DO (without the author's written permission)
+   a. Redistribute the Mod or any part of it: re-upload, mirror or host it on any other website,
+      file host, launcher or platform.
+   b. Include the Mod's files in a modpack, collection or bundle. A modpack may link to the
+      official source instead.
+   c. Modify, decompile or reverse-engineer the Mod in order to publish, share or reuse its code,
+      textures, models or other assets, or publish a modified version of the Mod.
+   d. Sell the Mod, charge for access to it, or claim it as your own work.
+   e. Remove or change this license or the author's name.
+
+4. NO WARRANTY
+   The Mod is provided "as is", without warranty of any kind. The author is not liable for any
+   damage, data loss or other harm that comes from using it. Back up your worlds.
+
+5. MINECRAFT
+   NOT AN OFFICIAL MINECRAFT PRODUCT. NOT APPROVED BY OR ASSOCIATED WITH MOJANG OR MICROSOFT.
+   Minecraft is a trademark of Mojang Synergies AB.
+
+6. ENDING
+   If you break these terms, your permission to use the Mod ends automatically.
+
+For permission requests, contact the author through https://github.com/LiamDaPanda.

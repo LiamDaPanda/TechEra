@@ -50,6 +50,10 @@ of the story: the server hears about it, your team gets the ending, and its name
   - ✔ means you have learned it;
   - ? means you haven't, and the sketch hints at how to learn it.
   - Future eras stay hidden until you reach them.
+- **The quest book:** open the notebook and click the **Quests** tab. Each era has a handful of
+  quests (25 in all) that walk you through it, from "make 16 charcoal" to "go home". Progress is
+  shared by your team, item quests show a counter, and each quest pays a reward toward the next
+  step. Quests for future eras stay hidden.
 - **Eras change at gate machines.** Each era has one. Run its recipe **8 times** to enter the
   next era. Each run prints a progress message, for example "(3/8 runs toward a new era)".
 - **Teams:** era, recipes and gate runs are shared by your team. Players on no team share one
@@ -335,7 +339,8 @@ S C S   R = redstone block
 ## Era IV: Modern (1900-2000)
 
 **Unlocked at the start of the era:** circuit boards, automatic rifle, composite armour, sentry
-turret, solar panel and motorcar (plus the vanilla items in the table above).
+turret, solar panel, motorcar and the **Arc Furnace** ([multiblock](#multiblock-machines)), plus
+the vanilla items in the table above.
 
 ```
 Composite Plate (x2)    Circuit Board (x2)      Automatic Rifle
@@ -459,6 +464,7 @@ Times are per run without power; power halves them.
 | Dynamo | V | energy cell + redstone → recharged cell | - | 15 s |
 | Particle accelerator | IV→V gate | 2 motors + 8 redstone + circuit board → exotic matter | - | 30 s |
 | Great Blast Furnace | III (multiblock) | 4 ore + 2 coke → 10 cast iron + 2 slag; 8 cast iron + 2 coke → 10 steel | 1400 / 1600 °C | 40 s |
+| Arc Furnace | IV (multiblock, needs power) | 8 cast iron → 12 steel; 4 chromite + 2 steel + 2 slag → 6 composite plates | 1700 / 1500 °C | 30 s |
 | Fusion Reactor | V (multiblock) | burns fusion pellets → power for 32 machines | 2500 °C | - |
 | Time Machine | V (finale) | 8 exotic matter + 8 circuit boards + energy cell → Homecoming Medal | - | 180 s |
 
@@ -548,7 +554,7 @@ All defences only hurt hostile mobs, never players.
 
 ## Multiblock machines
 
-Two machines are **structures** you build block by block around a controller. A multiblock only
+Three machines are **structures** you build block by block around a controller. A multiblock only
 runs while its structure is complete, and the controller's screen tells you which it is
 ("Structure complete" or "Incomplete").
 
@@ -577,6 +583,22 @@ F F F       F F F       F F F       F F F    (back row)
   - 8 cast iron + 2 coke → **10 steel**, at 1600 °C (bellows).
 - **Why build it:** it gives more metal per ore than the high furnace, and more steel per cast
   iron than the Bessemer converter. Fire and smoke roar out of the chimney while it works.
+
+### Arc Furnace (Era IV)
+The first machine that runs on **electricity instead of fuel**. A 3×3 shell of fire bricks, 3 tall,
+with an **arc electrode** in the middle of the roof (E):
+```
+Bottom      Middle      Top
+F C F       F F F       F F F    (front row)
+F F F       F . F       F E F
+F F F       F F F       F F F    (back row)
+```
+- **Power:** connect it to a generator (a steam engine next to the controller works). Powered,
+  the arc drives it to **1900 °C**; unpowered it stays cold and does nothing.
+- **Recipes:** 8 cast iron → **12 steel** (the best rate in the game), and 4 raw chromite + 2
+  steel + 2 slag → **6 composite plates**.
+- **Parts:** the electrode is steel, copper cable and a circuit board; the controller is fire
+  bricks around a dynamo and a motor.
 
 ### Fusion Reactor (Era V)
 A 5×5 ring, 3 tall. Seen from the front (S fusion casing, G any glass, O the fusion coil,
@@ -660,6 +682,7 @@ to see the register: every invention, its real year and inventor, and who holds 
 | Copper cable | Cooke and Wheatstone, 1837 | Hover bike, exotic matter | 22nd century |
 | Telegraph | Samuel Morse, 1844 | Time Machine | H. G. Wells (on paper), 1895 |
 | Circuit board | Jack Kilby, 1958 | Fusion Reactor | mid-21st century |
+| Arc furnace | Paul Héroult, 1907 | | |
 | Electric motor | Thomas Davenport, 1837 | Power armour, plasma rifle | 23rd century |
 
 On a multiplayer server this turns the tech tree into a race. Patents are for honour only:
@@ -1358,6 +1381,24 @@ S = Steel Ingot, C = Copper Ingot, R = Redstone Block
 
 #### Unlocked by: Era IV start
 
+**Arc Electrode**
+
+```
+S C S
+S I S
+S C S
+```
+S = Steel Ingot, C = Copper Cable, I = Circuit Board
+
+**Arc Furnace**
+
+```
+F M F
+F D F
+F F F
+```
+F = Fire Bricks, M = Electric Motor, D = Dynamo
+
 **Automatic Rifle**
 
 ```
@@ -1573,6 +1614,8 @@ X = Exotic Matter, C = Circuit Board, E = Energy Cell, A = Particle Accelerator
 
 | Machine | Inputs | Output | Heat | Notes |
 |---|---|---|---|---|
+| Arc Furnace | 4 × Raw Chromite + 2 × Steel Ingot + 2 × Slag | 6 × Composite Plate | 1500 °C | - |
+| Arc Furnace | 8 × Cast Iron Ingot | 12 × Steel Ingot | 1700 °C | has quality |
 | Bessemer Converter | 4 × Cast Iron Ingot | 4 × Steel Ingot | 1500 °C | has quality |
 | High Furnace | Iron Ore (bog iron, raw iron or iron ore) + 2 × Charcoal | 2 × Cast Iron Ingot + Slag | 1350 °C | has quality |
 | Charcoal Mound | any Log | Charcoal | 300 °C | - |

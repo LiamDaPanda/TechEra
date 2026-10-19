@@ -1,32 +1,37 @@
 // Screenshots the built site in the installed Edge with real time, so animations actually run.
-// usage: node scripts/shoot.mjs <url> <outDir>
+// usage: node scripts/shoot.mjs <url> <outDir> [steps]
 import { chromium } from 'playwright-core';
 
-const [url, out] = process.argv.slice(2);
-const browser = await chromium.launch({ channel: 'msedge', headless: true, args: ['--enable-unsafe-swiftshader'] });
+const [url, out, stepArg] = process.argv.slice(2);
+const steps = Number(stepArg) || 10;
+const browser = await chromium.launch({ channel: 'msedge', headless: true, args: ['--enable-unsafe-swiftshader', '--ignore-gpu-blocklist'] });
 const errors = [];
 
-async function shoot(name, viewport, steps) {
+async function shoot(name, viewport) {
 	const page = await browser.newPage({ viewport });
 	page.on('pageerror', (e) => errors.push(`${name}: ${e.message}`));
 	page.on('console', (m) => { if (m.type() === 'error') errors.push(`${name} console: ${m.text()}`); });
-	await page.goto(url, { waitUntil: 'networkidle' });
-	await page.waitForTimeout(2500); // let the hero animations finish
-	await page.screenshot({ path: `${out}/${name}-hero.png` });
-	for (const [i, y] of steps.entries()) {
-		await page.evaluate((top) => window.scrollTo({ top, behavior: 'instant' }), y);
-		await page.waitForTimeout(1600); // scroll-reveals and count-ups
-		await page.screenshot({ path: `${out}/${name}-${i + 1}.png` });
+	await page.goto(url, { waitUntil: 'domcontentloaded' });
+	await page.waitForTimeout(700);
+	await page.screenshot({ path: `${out}/${name}-0-intro.png` }); // mid time-warp
+	await page.waitForTimeout(3200);
+	await page.screenshot({ path: `${out}/${name}-1-hero.png` });
+	const height = await page.evaluate(() => document.documentElement.scrollHeight - innerHeight);
+	for (let i = 1; i <= steps; i++) {
+		const y = Math.round((height * i) / steps);
+		// scroll in small hops so scroll-driven animations see the movement
+		await page.evaluate(async (target) => {
+			const from = scrollY, n = 12;
+			for (let k = 1; k <= n; k++) { scrollTo(0, from + ((target - from) * k) / n); await new Promise((r) => setTimeout(r, 40)); }
+		}, y);
+		await page.waitForTimeout(1300);
+		await page.screenshot({ path: `${out}/${name}-${String(i + 1).padStart(2, '0')}.png` });
 	}
-	const h1 = await page.evaluate(() => {
-		const el = document.querySelector('h1');
-		return el ? { text: el.innerText, opacity: getComputedStyle(el.querySelector('*') || el).opacity } : null;
-	});
-	console.log(name, 'h1:', JSON.stringify(h1));
+	console.log(name, 'page height', height + viewport.height);
 	await page.close();
 }
 
-await shoot('desktop', { width: 1440, height: 900 }, [900, 1800, 2700, 3600, 4500]);
-await shoot('mobile', { width: 390, height: 844 }, [800, 1700, 2600]);
+await shoot('desktop', { width: 1440, height: 900 });
+await shoot('mobile', { width: 390, height: 844 });
 await browser.close();
 console.log(errors.length ? errors.join('\n') : 'no page errors');

@@ -27,15 +27,15 @@ const RELEASES = 'https://github.com/LiamDaPanda/TechEra/releases';
 const SPOT = 'rgba(232, 116, 59, 0.22)';
 
 const ERAS = [
-	{ name: 'Medieval', years: '1000-1400', hue: '18', shot: 'fort.jpg', alt: 'The timber hill fort every player wakes up in',
+	{ name: 'Medieval', years: '1000-1400', hue: '18', shot: 'fort-era-1.jpg', alt: 'The timber hill fort from above: log palisade and thatched huts',
 		text: 'Wake in a timber hill fort with nothing. Char logs in a sealed clamp, smelt bog iron with bellows, and hammer the bloom into wrought iron, then steel.' },
-	{ name: 'Gunpowder', years: '1400-1700', hue: '28', shot: 'machines.jpg', alt: 'Bloomery, forge and furnaces glowing in the fort',
-		text: 'Farm saltpetre in nitre beds and grind gunpowder in a powder mill. Then come muskets, cast iron from the high furnace, and cannon on the walls.' },
-	{ name: 'Industrial', years: '1700-1900', hue: '36', shot: 'great-blast-furnace.jpg', alt: 'The Great Blast Furnace pouring smoke from its chimney',
-		text: 'Coke burns hotter than charcoal ever could. Raise a four-storey blast furnace, run machines off steam, and tap out telegrams across the world.' },
-	{ name: 'Modern', years: '1900-2000', hue: '190', shot: 'vehicles.jpg', alt: 'A steam wagon, a motorcar and a hover bike',
+	{ name: 'Gunpowder', years: '1400-1700', hue: '28', shot: 'fort-era-2.jpg', alt: 'The fort rebuilt as a stone castle with battlements and timber-framed huts',
+		text: 'Farm saltpetre in nitre beds and grind gunpowder in a powder mill. Then come muskets, cast iron from the high furnace, and cannon on stone battlements.' },
+	{ name: 'Industrial', years: '1700-1900', hue: '36', shot: 'fort-era-3.jpg', alt: 'The fort in brick and slate, with glass windows and a smoking chimney',
+		text: 'Coke burns hotter than charcoal ever could. Raise a four-storey blast furnace, run machines off steam, and tap out telegrams while your fort turns to brick.' },
+	{ name: 'Modern', years: '1900-2000', hue: '190', shot: 'fort-era-4.jpg', alt: 'The fort as a concrete compound with asphalt lanes and a radio mast',
 		text: 'Motors, circuit boards and the electric arc furnace. Drive a motorcar, wire up solar panels, and let sentry turrets guard the walls.' },
-	{ name: 'Futuristic', years: '2000+', hue: '200', shot: 'fusion-reactor.jpg', alt: 'A running Fusion Reactor',
+	{ name: 'Futuristic', years: '2000+', hue: '200', shot: 'fort-era-5.jpg', alt: 'The fort as a glass citadel with quartz huts and glowing lights',
 		text: 'A fusion reactor that powers thirty-two machines, plasma rifles, power armour, and finally a time machine to take you home.' },
 ];
 

@@ -46,7 +46,7 @@ export default function EraJourney({ eras, img }) {
 		<section className="ej" ref={wrap} id="eras" aria-label="The five eras">
 			<div className="ej-head wrap">
 				<h2>Five eras. No research tree.</h2>
-				<p className="lede">Make something for the first time and the designs that use it open up. Run a gate machine eight times and history moves on.</p>
+				<p className="lede">Make something for the first time and the designs that use it open up. Run a gate machine eight times and history moves on, and your fort rebuilds itself to match.</p>
 			</div>
 			<div className="ej-track" ref={track}>
 				{eras.map((era, i) => (

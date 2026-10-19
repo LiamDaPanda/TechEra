@@ -732,6 +732,21 @@ storey every time the fort's team reaches a new era:
 You can see from a distance how far a team has come. In worlds made before 1.6.0, the
 monument appears with your team's next era.
 
+### The fort grows with you
+The whole fort rebuilds itself in each new era's materials, not just the monument:
+
+| Era | Walls | Huts | Roofs | Paths |
+|---|---|---|---|---|
+| I   | oak log palisade | spruce planks | hay thatch | dirt path |
+| II  | cobblestone and stone brick, with battlements | white plaster and dark oak beams | dark oak shingles | cobblestone lanes to every hut |
+| III | stone brick and red brick | brick, with glass windows | slate (deepslate tiles) | polished andesite |
+| IV  | grey concrete | white concrete | smooth stone | black asphalt |
+| V   | polished deepslate under cyan glass | white quartz | light blue glass domes | white quartz |
+
+Only blocks the fort placed itself are changed. Anything you built, broke or replaced stays exactly
+as you left it, so it is safe to decorate. Team forts follow their own team's era, and the world fort
+follows the players on no team. Worlds made before 2.3.0 catch up the next time the server starts.
+
 ---
 
 ## Teams and multiplayer

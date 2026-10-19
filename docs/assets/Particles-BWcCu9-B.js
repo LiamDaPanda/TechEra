@@ -1,4 +1,4 @@
-import{r as G,j as Qe}from"./index-BTwmajqA.js";const kt={circle:0,square:1,ring:2,sparkle:3},Dt={parallax:0,repel:1,attract:2},Ot={none:0,up:1,down:2,forward:3},zt=2e4,et=900,tt=9e3,te=4,me=10,ve=1/Math.tan(7.5*Math.PI/180),rt=.1,U=100,It=1.8,_e=1.5,it=520,st=46,Vt=`#version 300 es
+import{r as G,j as Qe}from"./index-BzzKnsuZ.js";const kt={circle:0,square:1,ring:2,sparkle:3},Dt={parallax:0,repel:1,attract:2},Ot={none:0,up:1,down:2,forward:3},zt=2e4,et=900,tt=9e3,te=4,me=10,ve=1/Math.tan(7.5*Math.PI/180),rt=.1,U=100,It=1.8,_e=1.5,it=520,st=46,Vt=`#version 300 es
 precision highp float;
 layout(location = 0) in vec2 aCorner;
 layout(location = 1) in vec3 aPosition;

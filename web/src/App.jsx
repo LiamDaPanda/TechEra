@@ -66,6 +66,20 @@ const reveal = {
 };
 
 /** A block that rises into view once, with an optional stagger index. */
+/** Drag the handle to compare the standard textures (left) with Tech Era HD (right). */
+function BeforeAfter() {
+	const [pos, setPos] = useState(50);
+	return (
+		<div className="ba" style={{ '--pos': `${pos}%` }}>
+			<img src={img('hd-before.png')} alt="Tech Era's standard 16x textures: machines, weapons and armour" />
+			<img className="ba-after" src={img('hd-after.png')} alt="The same textures in Tech Era HD, shaded and glowing at 32x" />
+			<span className="ba-tag ba-tag-l">Standard</span><span className="ba-tag ba-tag-r">HD</span>
+			<div className="ba-line" aria-hidden="true" />
+			<input type="range" min="0" max="100" value={pos} onChange={(e) => setPos(Number(e.target.value))} aria-label="Compare standard and HD textures" />
+		</div>
+	);
+}
+
 function Rise({ children, i = 0, className = '' }) {
 	return (
 		<motion.div className={className} variants={reveal} custom={i} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.2 }}>
@@ -281,6 +295,14 @@ export default function App() {
 							<img src={img('time-machine.jpg')} alt="The Time Machine: a brass frame around a glowing blue core" loading="lazy" />
 						</Rise>
 					</div>
+				</section>
+
+				<section className="wrap section hd" id="hd">
+					<div className="hd-copy">
+						<Rise><h2>Tech Era HD.</h2></Rise>
+						<Rise i={1}><p className="lede">A built-in resource pack redraws every machine, tool and armour piece at 32x, with depth, shading and glowing energy parts. It ships inside the mod: turn it on under Options, Resource Packs.</p></Rise>
+					</div>
+					<Rise i={2}><BeforeAfter /></Rise>
 				</section>
 
 				<section className="wrap section install">

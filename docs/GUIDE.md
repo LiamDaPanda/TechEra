@@ -9,6 +9,11 @@ of the story: the server hears about it, your team gets the ending, and its name
 `[✦]`. Your world carries on afterwards. For completionists there's also the advancement tab
 (press **L**, then open the *Tech Era* tab).
 
+**Want sharper visuals?** The mod ships with an optional **Tech Era HD** resource pack that redraws
+every machine, tool and armour piece at 32x, with shading, depth and glowing energy parts. Turn it
+on in **Options > Resource Packs**: move *Tech Era HD* to the right-hand side and click Done. It needs
+no download and works on servers too, because textures are client side.
+
 ## Contents
 
 1. [How progress works](#how-progress-works)

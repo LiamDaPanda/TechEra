@@ -231,3 +231,16 @@ main, .nav, .footer { position: relative; z-index: 1; }
 	.ej-track { display: block; width: auto; }
 	.ej-panel { width: auto; height: auto; grid-template-columns: 1fr 1fr; padding-block: 50px; }
 }
+
+/* Tech Era HD before/after */
+.hd { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); gap: 48px; align-items: center; }
+.ba { position: relative; border-radius: 6px; overflow: hidden; border: 1px solid var(--line); box-shadow: 0 30px 80px -30px rgba(232, 116, 59, 0.45); }
+.ba img { display: block; width: 100%; height: auto; image-rendering: pixelated; }
+.ba .ba-after { position: absolute; inset: 0; clip-path: inset(0 0 0 var(--pos)); }
+.ba-line { position: absolute; top: 0; bottom: 0; left: var(--pos); width: 2px; margin-left: -1px; background: #ffb05c; box-shadow: 0 0 14px #ff8a3d; pointer-events: none; }
+.ba-line::after { content: ''; position: absolute; top: 50%; left: 50%; width: 30px; height: 30px; margin: -15px 0 0 -15px; border-radius: 50%; background: #ffb05c; box-shadow: 0 0 18px #ff8a3d; }
+.ba input { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; cursor: ew-resize; margin: 0; }
+.ba input:focus-visible + .ba-line, .ba:has(input:focus-visible) .ba-line { outline: 2px solid #fff; }
+.ba-tag { position: absolute; top: 10px; padding: 3px 8px; border-radius: 6px; background: rgba(0, 0, 0, 0.6); font: 600 0.75rem 'JetBrains Mono', monospace; color: #e9e6e1; pointer-events: none; }
+.ba-tag-l { left: 10px; } .ba-tag-r { right: 10px; color: #ffb05c; }
+@media (max-width: 900px) { .hd { grid-template-columns: 1fr; gap: 24px; } }
